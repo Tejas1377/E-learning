@@ -1,13 +1,10 @@
 import mongoose from "mongoose";
-// import dotenv from "dotenv";
-
-// Load environment variables
-// dotenv.config();
 
 const connectdb = async () => {
+  const MONGO_URI = "mongodb+srv://pawartejas1377:1gdpi6bcXklePRkx@cluster0.8d1hi.mongodb.net/lms?retryWrites=true&w=majority"
   try {
     // Remove the deprecated options
-    await mongoose.connect(process.env.MONGO_URI);
+    await mongoose.connect(MONGO_URI);
 
     console.log("MongoDB Connected");
   } catch (error) {
